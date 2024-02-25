@@ -8,9 +8,12 @@ const Dashboard = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/users/getlogs", {
-        params: { email: user.email },
-      })
+      .get(
+        "https://employee-presence-tracking-system-api.onrender.com/api/users/getlogs",
+        {
+          params: { email: user.email },
+        }
+      )
       .then((response) => {
         console.log(response.data);
         setLogsStateArray(response.data);

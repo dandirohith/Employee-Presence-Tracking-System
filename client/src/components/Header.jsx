@@ -25,7 +25,7 @@ function Header() {
 
   const onLogout = async () => {
     const response = await axios.post(
-      "http://localhost:5000/api/users/logout",
+      "https://employee-presence-tracking-system-api.onrender.com/api/users/logout",
       user
     );
 
